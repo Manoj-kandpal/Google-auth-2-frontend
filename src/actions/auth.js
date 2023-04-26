@@ -62,7 +62,7 @@ export const loginWithGoogleOauth = (token, navigate) => async (dispatch) => {
     // window.location.href = `${frontendUrl}/dashboard`;
     dispatch(setAlert("Logged in! Welcome.", "success"));
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     const errors = err.response.data.errors;
     if (errors) {
       errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
